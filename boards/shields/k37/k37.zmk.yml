@@ -1,0 +1,7 @@
+file_format: "1"
+id: k37
+name: k37!
+type: shield
+requires: [pro_micro]
+features:
+  - keys
