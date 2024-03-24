@@ -1,9 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_EEK
+if SHIELD_K37
 
 config ZMK_KEYBOARD_NAME
-    default "k37! ~ Keyboard"
+    default "k37 ~ Keyboard"
 
 endif
