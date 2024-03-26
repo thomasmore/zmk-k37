@@ -65,7 +65,7 @@ ZMK_BEHAVIOR(kp_caps, hold_tap,
 };
 
 &sk {
-    release-after-ms = <900>;
+    release-after-ms = <2500>;
     quick-release;
 };
 
