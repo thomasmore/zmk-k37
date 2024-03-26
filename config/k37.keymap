@@ -52,6 +52,13 @@ ZMK_BEHAVIOR(tht, hold_tap,
     quick-tap-ms = <400>;
     bindings = <&kp>, <&kp>;
 )
+/* Hold-tap with caps_word on hold */
+ZMK_BEHAVIOR(kp_caps, hold_tap,
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <400>;
+    bindings = <&kp>, <&caps_word>;
+)
 
 &mt {
     quick-tap-ms = <400>;
@@ -79,6 +86,18 @@ ZMK_BEHAVIOR(nmspc, macro,
     tap-ms = <1>;
     bindings = <&kp COLON &kp COLON>;
 )
+ZMK_BEHAVIOR(bslh, macro,
+    wait-ms = <0>;
+    tap-ms = <1>;
+    bindings = <&kp BSLH &kp BSLH>;
+)
+SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
+ZMK_BEHAVIOR(dot_spc, macro,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+)
+SIMPLE_MORPH(bspc_del, SFT, &kp BSPC, &kp DEL)
 
 ZMK_LAYER(default,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
@@ -88,7 +107,7 @@ ZMK_LAYER(default,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp Z         &kp X        &tht CS(C) C  &tht CS(V) V   &kp B                       &kp N         &tht RBKT M   &kp COMMA     &kp DOT       &kp FSLH
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                      &kp DEL       &lt SYM TAB   &kp SPACE         X_MH      &kp BSPC      &lt NUM RET   &kp BSLH
+                                     &kp RG(SPACE)  &lt SYM TAB   &spc_morph        X_MH      &bspc_del     &lt NUM RET   &kp_caps BSLH 0
      //                             ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
      , &inc_dec_kp LC(TAB) CS(TAB)
  )
@@ -112,7 +131,7 @@ ZMK_LAYER(sym,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp EXCL         &kp MINUS    &kp PLUS     &kp EQUAL    &kp HASH                     &kp PIPE     &kp COLON     &kp LPAR       &kp RPAR     &kp QMARK
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp CARET        &kp FSLH     &kp STAR     &kp BSLH     &updir                       &kp TILDE    &kp DLLR      &kp LBRC       &kp RBRC     &kp AT
+          &kp CARET        &kp FSLH     &kp STAR     &bslh        &updir                       &kp TILDE    &kp DLLR      &kp LBRC       &kp RBRC     &kp AT
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
                                       ___           ___           ___               ___       ___           ___           ___
      //                             ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯

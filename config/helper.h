@@ -158,3 +158,8 @@
     UC_MACRO(name ## _upper, &kp U0 &kp U1 &kp U2 &kp U3) \
     UC_MODMORPH(name, &name ## _lower, &name ## _upper)
 
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_BEHAVIOR(NAME, mod_morph, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
