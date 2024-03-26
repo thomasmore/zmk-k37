@@ -57,7 +57,7 @@ ZMK_BEHAVIOR(kp_caps, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <400>;
-    bindings = <&kp>, <&caps_word>;
+    bindings = <&caps_word>, <&kp>;
 )
 
 &mt {
@@ -107,7 +107,7 @@ ZMK_LAYER(default,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp Z         &kp X        &tht CS(C) C  &tht CS(V) V   &kp B                       &kp N         &tht RBKT M   &kp COMMA     &kp DOT       &kp FSLH
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                     &kp RG(SPACE)  &lt SYM TAB   &spc_morph        X_MH      &bspc_del     &lt NUM RET   &kp_caps BSLH 0
+                                     &kp RG(SPACE)  &lt SYM TAB   &spc_morph        X_MH      &bspc_del     &lt NUM RET   &kp_caps 0 BSLH
      //                             ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
      , &inc_dec_kp LC(TAB) CS(TAB)
  )
