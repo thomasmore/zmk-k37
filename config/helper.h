@@ -22,6 +22,7 @@
 #define ZMK_BEHAVIOR_CORE_sticky_key      compatible = "zmk,behavior-sticky-key";      #binding-cells = <1>
 #define ZMK_BEHAVIOR_CORE_tap_dance       compatible = "zmk,behavior-tap-dance";       #binding-cells = <0>
 #define ZMK_BEHAVIOR_CORE_tri_state       compatible = "zmk,behavior-tri-state";       #binding-cells = <0>
+#define ZMK_BEHAVIOR_CORE_sensor_rotate   compatible = "zmk,behavior-sensor-rotate";   #sensor-binding-cells = <0>
 
 #define ZMK_BEHAVIOR(name, type, ...) \
     / { \
