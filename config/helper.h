@@ -164,3 +164,10 @@
         mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
         bindings = <BINDING1>, <BINDING2>; \
     )
+
+#define MACRO(NAME, BINDINGS) \
+    ZMK_BEHAVIOR(NAME, macro, \
+        wait-ms = <0>; \
+        tap-ms = <1>; \
+        bindings = <BINDINGS>; \
+    )

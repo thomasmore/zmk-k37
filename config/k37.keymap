@@ -71,21 +71,9 @@ ZMK_BEHAVIOR(kp_caps, hold_tap,
 
 ZMK_CONDITIONAL_LAYER(NUM SYM, ADJ)  // NUM + SYM --> ADJ
 
-ZMK_BEHAVIOR(updir, macro,
-    wait-ms = <0>;
-    tap-ms = <1>;
-    bindings = <&kp DOT &kp DOT &kp FSLH>;
-)
-ZMK_BEHAVIOR(nmspc, macro,
-    wait-ms = <0>;
-    tap-ms = <1>;
-    bindings = <&kp COLON &kp COLON>;
-)
-ZMK_BEHAVIOR(bslh, macro,
-    wait-ms = <0>;
-    tap-ms = <1>;
-    bindings = <&kp BSLH &kp BSLH>;
-)
+MACRO(updir, &kp DOT &kp DOT &kp FSLH)
+MACRO(nmspc, &kp COLON &kp COLON)
+MACRO(bslh, &kp BSLH &kp BSLH)
 SIMPLE_MORPH(bspc_del, SFT, &kp BSPC, &kp DEL)
 
 #define NAV_LEFT  &mt LC(LEFT) LEFT
