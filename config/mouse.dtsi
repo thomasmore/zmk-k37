@@ -26,5 +26,5 @@
 
 ZMK_BEHAVIOR(scroll_up_down, sensor_rotate,
   tap-ms = <20>;
-  bindings = <U_WH_U>, <U_WH_D>;
+  bindings = <U_WH_D>, <U_WH_U>;
 )
