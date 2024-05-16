@@ -1,5 +1,5 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 140
 
 #include <dt-bindings/zmk/mouse.h>
 
@@ -25,5 +25,6 @@
 #define U_WH_R &msc SCRL_RIGHT
 
 ZMK_BEHAVIOR(scroll_up_down, sensor_rotate,
-    bindings = <U_WH_U>, <U_WH_D>;
+  tap-ms = <20>;
+  bindings = <U_WH_U>, <U_WH_D>;
 )
