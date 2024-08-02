@@ -27,7 +27,6 @@ ZMK_COMBO(enter, &kp RET,     LT2 LT1,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(bspace,&kp BSPC,    LT1 LT0,     DEF, COMBO_TERM_SLOW)
 //
 // /* Horizontal combos - right hand */
-ZMK_COMBO(sqt,    HRC_SQT,      RM3 RM4,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(under,  &kp UNDER,    RT2 RT3,     DEF, COMBO_TERM_FAST)
 ZMK_COMBO(cancel, &kp K_CANCEL, RB1 RB2,     DEF, COMBO_TERM_FAST)
 ZMK_COMBO(mouse,  &to MOUSE,    RT1 RT2,     DEF, COMBO_TERM_FAST)
