@@ -23,10 +23,18 @@
 ZMK_COMBO(esc,   HRC_ESC,     LM4 LM3,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(copy,  &kp LC(C),   LB3 LB2,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(paste, &kp LC(V),   LB3 LB1,     DEF, COMBO_TERM_SLOW)
+ZMK_COMBO(cut,   &kp LC(X),   LB2 LB1,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(enter, &kp RET,     LT2 LT1,     DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(bspace,&kp BSPC,    LT1 LT0,     DEF, COMBO_TERM_SLOW)
+ZMK_COMBO(undo,  &kp LC(Z),   LB4 LB3,     DEF, COMBO_TERM_SLOW)
 //
 // /* Horizontal combos - right hand */
 ZMK_COMBO(under,  &kp UNDER,    RT2 RT3,     DEF, COMBO_TERM_FAST)
 ZMK_COMBO(cancel, &kp K_CANCEL, RB1 RB2,     DEF, COMBO_TERM_FAST)
 ZMK_COMBO(mouse,  &to MOUSE,    RT1 RT2,     DEF, COMBO_TERM_FAST)
+//
+// /* Vertical combos - left hand */
+ZMK_COMBO(ctrla,  &kp LC(A),    LB4 LM4,     DEF, COMBO_TERM_SLOW)
+//
+// /* Vertical combos - right hand */
+ZMK_COMBO(lockscr, &kp LG(L),   RM3 RT3,     DEF, COMBO_TERM_SLOW)
